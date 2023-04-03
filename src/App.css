@@ -1,0 +1,102 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    caret-color: #D5FFD9;
+}
+
+
+.control-timer-container{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+*::selection{
+    background-color: #94AE89;
+}
+.length-control{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "a a a"
+        "b c d"
+    ;
+}
+.length-control h3{
+    text-align: center;
+    grid-area: a;
+}
+.length-control .btn-level button {
+    grid-area: b;
+}
+.length-control p {
+    grid-area: c;
+    text-align: center;
+    /*background-color: transparent;
+    border: none;
+    width: 50px;     */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"]:focus {
+    outline: none;
+    border-color: blue;
+    box-shadow: none;
+  }
+
+.length-control .btn-level:nth-of-type(2) {
+    grid-area: d;
+}
+.timer{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    place-items: center;
+    /* border: 7px solid #13353a; */
+    width: 270px;
+    height: 160px;
+    border-radius: 50px;
+}
+#timer-label{
+    padding: 1.5rem 0.25rem 0 0.25rem;
+    /**/
+    background-color: #D5FFD9;
+    display: inline-block;
+    margin-bottom: -15px;
+}
+#time-left {
+    font-size: 45px;
+    font-family: 'Press Start 2P', cursive;
+}
+.timer-control{
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.author{
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+}
+.nameAuthor{
+    color: red;
+}
+svg{
+    width: 30px;
+}
+svg:hover{
+    fill: #94AE89;
+}
+button{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
